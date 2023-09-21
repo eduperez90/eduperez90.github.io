@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+  display: inline-block;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.menu li:hover {
+  background-color: #ccc;
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.menu li:hover > ul {
+  display: inherit;
+}
+
+.menu ul ul li {
+  width: 200px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+.menu ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 200px;
+}
+
+.menu a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.menu ul ul a {
+  padding: 10px;
+  color: #333;
+}
+
+.menu ul ul ul a {
+  padding-left: 30px;
+}
+
+.menu ul ul ul a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu li {
+    display: block;
+    width: 100%;
+  }
+}
+    </style>
 </head>
 <body>
-    <nav>
+    <nav class="menu">
         <ul>
           <li><a href="#">TEMA 0: INTRODUCCIÓN</a>
             <ul>

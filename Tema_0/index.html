@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica_1</title>
+    <style>
+        .acordeon {
+            padding: 30px;
+            display: flex;
+            justify-content: left;
+        }
+
+        details {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        sumary {
+            background: #f2f2f2;
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        p {
+            padding: 15px;
+            margin: 0;
+            background: #f2f2f2;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        meter {
+            width: 300px;
+            height: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+        form {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        input[type=range] {
+            background: red;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 100px;
+        }
+        
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Consejos HTML</h1>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                El atributo `loading=lazy`
+            </summary>
+            <p>Puede utilizar el loading=lazyatributo para diferir la carga de la imagen hasta que el usuario se
+                desplace hacia ella.</p>
+            <img src='image.jpg' loading='lazy' alt='Alternative Text'>
+        </details>
+    </div>
+    <hr>
+
+    <div class="acordeon">
+        <details>
+            <summary>
+                Enlaces de correo electronico, llamadas y sms
+            </summary>
+            <a href="mailto:{email}?subject={subject&body={content}}">Mandanos un email</a>
+            <br>
+            <a href="tel:{phone}">Llamanos</a>
+            <br>
+            <a href="sms:{phone}?body={content}">Envianos un mensage</a>
+        </details>
+    </div>
+    <hr>
+    <!--
+        No conocia ninguna
+    -->
+    <div class="acordeon">
+        <details>
+            <summary>
+                Listas ordenadas del atributo 'inicio'
+            </summary>
+            <p>
+                Utilice el atributo start para cambiar el punto de partida de sus listas ordenadas.
+            </p>
+            <ol start="3">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Go</li>
+            </ol>
+        </details>
+    </div>
+
+    <!--
+        lo conocia
+    -->
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Elemento "metro"
+            </summary>
+            <p>
+                Puede utilizar el meter elemento para mostrar cantidades. No se necesita JavaScript/CSS
+            </p>
+            <label for="value1">Low</label>
+            <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="25"></meter>
+
+            <label for="value2">Medium</label>
+            <meter id="value2" min="0" max="100" low="30" high="75" optimum="80" value="50"></meter>
+
+            <label for="value3">High</label>
+            <meter id="value3" min="0" max="100" low="30" high="75" optimum="80" value="80"></meter>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Búsqueda nativa HTML
+            </summary>
+            <input list="items">
+            <option value="Marko Denic">
+            <option value="FreeCodeCamp">
+            <option value="FreeCodeTools">
+            <option value="Web Development">
+            <option value="Web Developer">
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Elemento de conjunto de campos
+            </summary>
+            <form>
+                <fieldset>
+                    <legend>Elige tu lenguaje favorito</legend>
+
+                    <input type="radio" id="javascript" name="language">
+                    <label for="javascript">JavaScript</label><br />
+
+                    <input type="radio" id="python" name="language">
+                    <label for="python">Python</label><br />
+
+                    <input type="radio" id="java" name="language">
+                    <label for="java">Java</label>
+                </fieldset>
+            </form>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Abridor de ventanas
+            </summary>
+            <p>
+                Las páginas abiertas con target="_blank"permiten que la nueva página acceda a la original window.opener.
+                Esto puede tener implicaciones de seguridad y rendimiento. Incluir rel="noopener"o
+                rel="noreferrer"prevenir esto
+            </p>
+            <a href="https://markodenic.com/" target="_blank" rel="noopener">
+                Marko's website
+            </a>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Elemento básico 'base'
+            </summary>
+            <a href="https://freecodetools.org/">
+                Free Code Tools
+            </a>
+
+            <p>
+                Read more: <br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">
+                    MDN Documentation
+                </a>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Eliminación de caché de Favicon
+            </summary>
+            <p>
+                Para actualizar el favicon de su sitio web, puede obligar a los navegadores a descargar una nueva
+                versión agregándola ?v=2al nombre del archivo.
+                Esto es especialmente útil en producción para garantizar que los usuarios obtengan la nueva versión.
+            </p>
+            <link rel="icon" href="/favicon.ico?v=2" />
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                El atributo "corrector ortográfico"
+            </summary>
+            <p>
+                Utilice el spellcheckatributo para definir si se puede revisar el elemento en busca de errores
+                ortográficos.
+            </p>
+            <label for="input1">corrector="true"</label>
+            <input type="text" id="input1" spellcheck="true">
+
+            <label for="input2">corrector="false"</label>
+            <input type="text" id="input2" spellcheck="false">
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Controles deslizantes HTML nativos
+            </summary>
+            <p>
+                Puede utilizar input type="range" para crear controles deslizantes.
+            </p>
+            <label for="volume">Volume: </label>
+            <input type="range" id="volume" name="volume" min="0" max="20">
+
+            <label for="result">Your choice: </label>
+            <input type="number" id="result" name="result">
+
+            <script>
+                const volume = document.getElementById('volume');
+                const result = document.getElementById('result');
+                result.value = volume.value;
+                volume.addEventListener('change', () => {
+                    result.value = volume.value;
+                });</script>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Acordeon HTML
+            </summary>
+            <p>Puede utilicar el details elemento para crear un acordeon HTMLnativo
+            </p>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                etiqueta `marca`
+            </summary>
+            <p>
+                Puede utilizar la marketiqueta para resaltar texto.
+            </p>
+            <p>No te olvides de tener un <mark> asombroso </mark>dia</mark></p>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                atributo `descargar`
+            </summary>
+            <p>
+                Puede utilizar el downloadatributo en sus enlaces para descargar el archivo en lugar de navegar hasta
+                él.
+            </p>
+            <a href='path/to/file' download>
+                Download
+            </a>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Consejo de rendimiento
+            </summary>
+            <p>
+                Utilice el .webpformato de imagen para reducir el tamaño de las imágenes y mejorar el rendimiento de su
+                sitio web.
+            </p>
+            <picture>
+                <!-- load .webp image if supported -->
+                <source srcset="logo.webp" type="image/webp">
+
+                <!-- 
+                  Fallback if `.webp` images or <picture> tag 
+                  not supported by the browser.
+                -->
+                <img src="logo.png" alt="logo">
+            </picture>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                Miniatura del vídeo
+            </summary>
+            <p>
+                Utilice el posteratributo para especificar una imagen que se mostrará mientras se descarga el vídeo o
+                hasta que el usuario presione el botón de reproducción.
+            </p>
+            <video poster="path/to/image">
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                entradatype="search"
+            </summary>
+            <p>
+                Utilice type="search"para sus entradas de búsqueda y obtendrá el botón "borrar" de forma gratuita.
+            </p>
+            <form>
+                <label for="text">Input type text</label>
+                <input type="text" id="text" name="text">
+                <label for="search">Input type Search</label>
+                <input type="search" id="search" name="search">
+            </form>
+        </details>
+    </div>
+    <hr>
+    <div class="acordeon">
+        <details>
+            <summary>
+                etiqueta `pre`
+            </summary>
+            <p>
+                Utilice la `pre` etiqueta para presentar texto preformateado exactamente como está escrito en el archivo
+                HTML:
+            </p>
+            <h3>
+                Con pre tag
+            </h3>
+
+            <pre>
+                  .center {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;   
+                  }           
+              </pre>
+
+            <h3>
+                Sin pre tag
+            </h3>
+            <p class="preclass">
+                .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+            </p>
+        </details>
+    </div>
+</body>
+</html>
